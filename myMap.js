@@ -25,7 +25,7 @@ function get_pokemon_layer_from_map_items(map_items) {
       var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(map_item["latitude"], map_item["longitute"]), 
                                                {icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png'});
       map.entities.push(pushpin);
-      pushpins.add(pushpin)      
+      pushpins.push(pushpin)      
   }
   layer.add(pushpins);
   return layer;
