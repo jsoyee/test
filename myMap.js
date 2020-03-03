@@ -8,10 +8,10 @@ function loadMapScenario() {
 // 1. Define pokemon data format, create mock pokemon dat
 map_items = 
   {
-      "pokenmon_id" : 12
-      "expire" : 123456
-      "longitute" : -74.0392717
-      "latitude" : 40.759170
+      "pokenmon_id" : 12,
+      "expire" : 123456,
+      "longitute" : -74.0392717,
+      "latitude" : 40.759170,
    }
 ]
     
