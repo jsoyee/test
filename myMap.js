@@ -13,6 +13,12 @@ map_items = [
       "expire" : 123456,
       "longitute" : -74.0392717,
       "latitude" : 40.759170,
+   },
+    {
+      "pokenmon_id" : 13,
+      "expire" : 1234567,
+      "longitute" : -75.0392717,
+      "latitude" : 41.759170,
    }
 ]
     
