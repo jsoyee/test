@@ -8,19 +8,7 @@
     <script type='text/javascript'
             src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
     
-    <script type='text/javascript'>
-    function GetMap()
-    {
-        var map = new Microsoft.Maps.Map('#myMap', {
-            credentials: 'Ai0nViiVccSpZIM0V3l98alsJ2GHp4q00npdZ4rz-cwLWGsJQRPqPY3rm0PDl9rV',
-            center: new Microsoft.Maps.Location(51.50632, -0.12714),
-            mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-            zoom: 10
-        });
-
-        //Add your post map load code here.
-    }
-    </script>
+    <script type='text/javascript' src="myMap.js"></script>
 </head>
 <body>
     <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
