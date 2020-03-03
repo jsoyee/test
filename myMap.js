@@ -6,7 +6,7 @@ function loadMapScenario() {
 }
     
 // 1. Define pokemon data format, create mock pokemon dat
-map_items = 
+map_items = [
   {
       "pokenmon_id" : 12,
       "expire" : 123456,
