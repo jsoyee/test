@@ -52,7 +52,7 @@ function get_pokemon_layer_from_map_items(map_items) {
 
 
 function add_pokemon_layer() {
-    var pokenmon_layer = get_pokemon_layer_from_map_items(map_items)
+    var pokenmon_layer = get_pokemon_layer_from_map_items(map_manager.map_items)
     map.layers.insert(pokenmon_layer);
 }
 
