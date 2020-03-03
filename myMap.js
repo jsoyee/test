@@ -43,7 +43,7 @@ function get_pokemon_layer_from_map_items(map_items) {
       var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(map_item["latitude"], map_item["longitute"]), 
                                                {icon: 'images/pushpin_images/pokemon/' + map_item['pokenmon_id'] + '.png', 
                                                title: get_counter_down_time_from_expire_epoch(map_item['expire'])});
-       map.entities.push(pushpin);
+       map_manager.map.entities.push(pushpin);
   }
 
   return layer;
@@ -60,7 +60,7 @@ function add_pokemon_layer() {
 // 3. Add pokenmon count down refresh
 function refresh_pokemon_layer() {
 // Prepare new layer
-    var pokenmon_layer = get_pokemon_layer_from_map_items(map_items)
+    var pokenmon_layer = get_pokemon_layer_from_map_items(map_manager.map_items)
 
 // Remove old layer
     map.layers.clear()
