@@ -38,16 +38,29 @@ function get_counter_down_time_from_expire_epoch(epoch) {
 // 2. Create pokenmon image on map
 function get_pokemon_layer_from_map_items(map_items) {
   var layer = new Microsoft.Maps.Layer();
-  for (var i in map_items) {
-      var map_item = map_items[i];
-      var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(map_item["latitude"], map_item["longitute"]), 
-                                               {icon: 'images/pushpin_images/pokemon/' + map_item['pokenmon_id'] + '.png', 
-                                               title: get_counter_down_time_from_expire_epoch(map_item['expire'])});
-       map_manager.map.entities.push(pushpin);
+//   for (var i in map_items) {
+//       var map_item = map_items[i];
+//       var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(map_item["latitude"], map_item["longitute"]), 
+//                                                {icon: 'images/pushpin_images/pokemon/' + map_item['pokenmon_id'] + '.png', 
+//                                                title: get_counter_down_time_from_expire_epoch(map_item['expire'])});
+//        map_manager.map.entities.push(pushpin);
+//   }
+
+//   return layer;
+
+// }
+  for(var i in map_items){
+    var map_item = map_items[i];
+    var pushpin = new Microsoft.Maps.Pushpin(
+                        new Microsoft.Maps.Location(map_item["latitude"],map_item["longitude"]),
+                        { icon: 'images/pushpin_images/pokemon/'+map_item["pokemon_id"]+".png",
+                        //use pushpin title
+                        title:get_counter_down_time_from_expire_epoch(map_item["expire"])
+                      });
+    pushpins.push(pushpin);
   }
-
+  layer.add(pushpins);
   return layer;
-
 }
 
 
@@ -72,5 +85,5 @@ function refresh_pokemon_layer() {
     
 // 4. Connect with REST API
 
-window.setInterval(refresh_pokemon_layer, 1000);
+window.setInterval(refresh_pokemon_layer, 1000)
 
