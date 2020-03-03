@@ -51,17 +51,12 @@ function get_pokemon_layer_from_map_items(map_items) {
 }
 
 
-
 function add_pokemon_layer() {
     var pokenmon_layer = get_pokemon_layer_from_map_items(map_items)
     map.layers.insert(pokenmon_layer);
-
 }
 
  
-    
-    
-    
 // 3. Add pokenmon count down refresh
 function refresh_pokemon_layer() {
 // Prepare new layer
@@ -74,6 +69,8 @@ function refresh_pokemon_layer() {
     map.layers.insert(pokenmon_layer);
 }
 
-window.setInterval(refresh_pokemon_layer, 1000);
     
 // 4. Connect with REST API
+
+window.setInterval(refresh_pokemon_layer, 1000);
+
